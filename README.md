@@ -9,7 +9,8 @@ A tool using a json input to generate a DOT graph and STRIDE CSV file
 To use this, just git clone the project to your machine. 
 Take example.json as a template. Entities, processes, datastore and edges need to be created in their respective nodes as in the example.
 Once ready, simply run dot-tm.py
-Check the documentation for more details : https://github.com/project-cx/dot-tm/blob/master/HowTo.pdf
+Check the documentation for more details : [HowTo.pdf](HowTo.pdf)
+
 
 ### Demo server
 
@@ -27,8 +28,18 @@ The solution requires:
 	- graphviz 2.38 
 		https://www.graphviz.org/download/
 
-### Docker
-You can build you docker image using the supplied Dockerfile. This is the easiest way to run the solution.
+### Docker Hub
+
+You can get the latest build from docker hub : 
+` docker pull fallenz/dot-tm `
+
+Then run the instance with `docker run -d -p 8090:80 --name dotm fallenz/dot-tm:latest `
+
+Once done, open your web browser of choice and open http://localhost:8090/
+
+
+### Docker Build Your Own
+Alternatively, You can build your own docker image using the supplied Dockerfile.
 
 `#Run this command from the location where the Dockerfile is situated`
 
@@ -36,7 +47,7 @@ You can build you docker image using the supplied Dockerfile. This is the easies
 
 `# Expose port 8090 on localhost to access the web page`
 
-`docker run -d -p 8090:80 --name dotrm my_dot-tm `
+`docker run -d -p 8090:80 --name dotm my_dot-tm `
 
 Once done, open your web browser of choice and open http://localhost:8090/
 
